@@ -20,7 +20,7 @@ def clean_tax(tax):
 	return float(tax[:tax.find('%')])
 
 taxes = {}
-with open('csv/US-taxes.csv', 'rb') as csvfile:
+with open('../csv/US-taxes.csv', 'rb') as csvfile:
 	states = csv.reader(csvfile, delimiter=',')
 	next(states)
 	for state in states:

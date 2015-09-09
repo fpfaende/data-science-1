@@ -25,7 +25,7 @@ def find_state_from_abbrev(abbrev, states):
 			return key
 
 states = {}
-with open('csv/US-states.csv', 'rb') as csvfile:
+with open('../csv/US-states.csv', 'rb') as csvfile:
 	statesNames = csv.reader(csvfile, delimiter=',')
 	next(statesNames)
 	for stateNames in statesNames:
@@ -33,7 +33,7 @@ with open('csv/US-states.csv', 'rb') as csvfile:
 		name = clean_name(name)
 		states[name] = {'short':stateNames[1]}
 
-with open('csv/US-taxes.csv', 'rb') as csvfile:
+with open('../csv/US-taxes.csv', 'rb') as csvfile:
 	statesTaxes = csv.reader(csvfile, delimiter=',')
 	next(statesTaxes)
 	for stateTaxes in statesTaxes:
@@ -52,6 +52,8 @@ with open('csv/US-taxes.csv', 'rb') as csvfile:
 			tax = clean_tax(base_tax)
 
 		states[name]['tax'] = tax/100
+
+print states
 
 print 'tax for Arkansas is', states['Arkansas']['tax']
 print 'tax for MD is', states[find_state_from_abbrev('MD',states)]['tax']
