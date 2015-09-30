@@ -2,7 +2,37 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>HSK 1 flashcards</title>
+</script>
+</head>
+<body>
+<div id="chinese">chinese</div>
+<div id="pinyin">pinyin</div>
+<div id="english">english</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="data.js"></script>
 <script>
 function shuffle() {
@@ -11,14 +41,3 @@ document.getElementById("chinese").innerHTML = word["cn"];
 document.getElementById("pinyin").innerHTML = word["pinyin"];
 document.getElementById("english").innerHTML = word["en"];
 };
-
-</script>
-</head>
-
-<body onclick="javascript:shuffle();">
-<div id="chinese">chinese</div>
-<div id="pinyin">pinyin</div>
-<div id="english">english</div>
-</body>
-
-</html>

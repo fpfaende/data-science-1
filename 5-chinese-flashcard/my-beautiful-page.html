@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>HSK 1 flashcards</title>
+<script src="data.js"></script>
+<!-- shangdaemon.org/data-science-1/ -->
+<script>
+
+
+console.log('hello');
+console.log(Math.random());
+console.log(data);
+
+function hereIam(){
+	var line = data[Math.floor(Math.random() * data.length)]
+	document.getElementById('chinese').innerHTML = line['cn']
+	document.getElementById('pinyin').innerHTML = line['pinyin']
+	document.getElementById('english').innerHTML = line['en']
+}
+
+</script>
+
+</head>
+<body>
+	<div id="card">
+		<div id="chinese" onclick="javascript:hereIam();">change me!</div>
+		<div id="pinyin" class="small">pinyin</div>
+		<div id="english" class="small">JSON</div>
+	</div>
+</body>
+
+</html>
